@@ -1,7 +1,15 @@
 def main():
     text = input("Input: ")
+    tweet = shorten(text)
+    print(tweet)
+
+
+def shorten(word):
     tweet = ""
-    for t in text:
+    for t in word:
         tweet += t.strip("aeiouAEIOU")
-    print("Output: " + tweet)
-main()
+    print(f"Output: {tweet}")
+
+
+if __name__ == "__main__":
+    main()
