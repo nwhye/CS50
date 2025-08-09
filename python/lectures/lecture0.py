@@ -1,4 +1,4 @@
-        print("what is the name of the kitty?")
+print("what is the name of the kitty?")
 # or another way
 input("what is the name of the kitty? ")
 print("mewo, kitty")
@@ -45,7 +45,7 @@ print(f"owowo, mewo, kitty-{last}")
 # to turn on interactive mode write in terminal 'python'
 
 
-# CALCULATOR
+# --- CALCULATOR
 
 x = input("What is x? ")
 y = input("What is y? ")
@@ -75,7 +75,7 @@ print(f"{z:,}")  # if the user sum more than a 1000, so it will put in the answe
 print(f"{z:.2f}")  # so it will round to 2 digits after comma thorough format string
 
 
-# CREATION OF OWN FUNCTIONS (def-define)
+# --- CREATION OF OWN FUNCTIONS (def-define)
 
 # def hello(to="kitty"):  # "kitty" would be written if there is no argument
 #     print("hewwo", to)
@@ -85,7 +85,7 @@ print(f"{z:.2f}")  # so it will round to 2 digits after comma thorough format st
 # hello(name)
 
 
-# THE LOOK OF THE CODE
+# --- THE LOOK OF THE CODE
 # functions can be all at the bottom of the screen, and action in the main. And in the end just call function main
 
 # global variables that you want to use in any function must be in the beginning of the code, so at the top
