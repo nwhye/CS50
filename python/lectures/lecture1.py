@@ -1,3 +1,4 @@
+# --- CONDITIONALS
 x = int(input("Enter the number x: "))
 y = int(input("Enter the number y: "))
 
@@ -26,7 +27,7 @@ else:
     print("x is equal to y")
 
 
-# AND 
+# --- AND
 score = int(input("Scroe:  "))
 
 #instead of score >= 90 and score <=100
@@ -46,7 +47,7 @@ else:
     print("Grade F")
 
 
-# % modular
+# --- % modular
 x = int(input("What's x: "))
 
 if x % 2 == 0:
@@ -54,7 +55,7 @@ if x % 2 == 0:
 else:
     print("Odd")
 
-# CLEAN VERSION
+# --- CLEAN VERSION
 def main():
     x = int(input("What's x: "))
     if is_even(x):
