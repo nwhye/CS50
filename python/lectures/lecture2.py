@@ -1,4 +1,4 @@
-# LOOP
+# --- LOOPS
 i = 3
 while i != 0:
     print("meow")
@@ -15,7 +15,7 @@ while b < 3:
     print("meow")
     b += 1
 
-# FOR
+# --- FOR
 for i in [0, 1, 2]:
     print("meow")
 
@@ -32,7 +32,7 @@ print("meow\n" * 3, end="")
 # else:
 #     break
 
-# VALIDATING INPUT
+# --- VALIDATING INPUT
 while True:
     n = int(input("What's n? "))
     if n > 0:
@@ -41,7 +41,7 @@ while True:
 for _ in range(n):
     print("meow")
 
-# HOW TO USE
+# --- HOW TO USE
 
 
 def main():
@@ -63,7 +63,7 @@ def meow(n):
 
 main()
 
-# LIST
+# --- LIST
 students = ["Danya", "Anya", "Artem"]
 
 print(students[0])
@@ -75,7 +75,7 @@ for i in range(len(students)):  # to show the number of the content in list ( 1 
     # we use len(students) so we can dynamically change the size of list, and this loop still will be working
     print(i + 1, students[i])  # +1 to hide that we're counting from 0
 
-# DICTIONARY (keys and values)
+# --- DICTIONARY (keys and values)
 
 friends = {
     "Danya": "Cool",
@@ -116,7 +116,7 @@ def main():
 main()
 
 
-# LIST OF DICTIONARIES
+# --- LIST OF DICTIONARIES
 
 friends = [
     {"name": "Danya", "age": 19, "status": "cool"},
@@ -128,7 +128,7 @@ for fri in friends:
     print(fri["name"], fri["age"],  sep=", ")  # to print names and age. fri = keys in dictionary
 
 
-# NESTED LOOPS
+# --- NESTED LOOPS
 
 for _ in range(3):
     print("#")
