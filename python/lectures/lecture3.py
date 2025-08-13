@@ -1,4 +1,4 @@
-# TRY and EXCEPT
+# --- TRY and EXCEPT
 while True:
     try:
         x = int(input("Enter a number: "))  # so if the user write str, it will go to exception
@@ -31,7 +31,7 @@ print(f"x is {x}")
 # break
 
 
-# PASS
+# --- PASS
 # catch error, but passing on saying anything
 
 while True:
@@ -44,7 +44,7 @@ while True:
 
 print(f"x is {x}")
 
-# FINAL VERSION
+# --- FINAL VERSION
 
 
 def main():
@@ -66,7 +66,7 @@ def get_int(prompt):  # we can send anything, just calling it's prompt as it's w
 
 main()
 
-# COOL STUFF
+# --- COOL STUFF
 
 def main():
     f = fuel_check("Fraction: ")
