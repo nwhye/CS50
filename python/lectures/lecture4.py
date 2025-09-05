@@ -1,5 +1,4 @@
-# modules is a library with functions or other build in features
-
+# --- modules is a library with functions or other build in features
 
 # program to generate
 # import random. we import everything, but what if we want to use just choice, and not write "random.choice" every time?
@@ -24,7 +23,7 @@ import statistics
 
 print(statistics.mean([100, 90]))
 
-# COMMAND-LINE ARGUMENTS
+# --- COMMAND-LINE ARGUMENTS
 # SYS.ARGV
 # after "python name.py " type something as an input
 # without arguments - IndexError
@@ -50,7 +49,7 @@ elif len(sys.argv) > 2:
 print("hello, my name is ", sys.argv[1])
 
 
-# MULTIPLE INPUT
+# --- MULTIPLE INPUT
 # SLICE
 
 if len(sys.argv) < 2:
@@ -62,7 +61,7 @@ for arg in sys.argv[1:]:                  # to iterate over the list (can be "na
     print("hello, my name is ", arg)
 
 
-# PACKAGES
+# --- PACKAGES
 # to install 3rd parties libraries
 # PyPI - pypi.org - to install any type of packages
 
@@ -79,7 +78,7 @@ if len(sys.argv) == 2:
 # there is only if, so nothing happened until conditions are met
 
 
-# API
+# --- API
 # API application programming interface, referred to 3rd parties services
 # it can connect to the data on the server and work together with your code
 
@@ -117,7 +116,7 @@ for result in o["results"]:  # loop to iterate all songs of the inputted group
     # these names we got from the itunes API, and those JSON things we can not change
 
 
-# YOUR OWN LIBRARY
+# --- YOUR OWN LIBRARY
 
 # ----------------------------------
 # file "saying.py"
