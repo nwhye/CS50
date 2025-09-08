@@ -54,6 +54,7 @@ def main():
         student[1] = "Ravenclaw"
     print(f"{student[0]} from {student[1]}")
 
+
 def get_student():
     name = input("Enter your name: ")
     house = input("Enter your house: ")
@@ -66,7 +67,7 @@ def main():
     student = get_student()
     if student["name"] == "Padma":
         student["house"] = "Ravenclaw"
-    print(f"{student['name']} from {student['student']}")
+    print(f"{student['name']} from {student['house']}")
 
 
 def get_student():
@@ -77,6 +78,7 @@ def get_student():
 
 # or
 
+
 def get_student():
     name = input("Enter your name: ")
     house = input("Enter your house: ")
@@ -84,5 +86,63 @@ def get_student():
 
 
 # --- CLASSES AND OBJECTS
+# class - blueprint, allows us to create our own data type (to define custom containers for pieces of data)
+# primary feature of OOP is to be able to create your own objects
 
+# when you use class you create OBJECTS (or instance)
+# .name and .house here are attributes
+
+class Student:
+    ...
+
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+
+
+def get_student():
+    student = Student()  # creating an object
+    student.name = input("Enter your name: ")
+    student.house = input("Enter your house: ")
+    return student
+
+# however it's reckless to put anything you want inside of object
+# here the example with more control, as we're passing specific thing in to the class
+
+
+def get_student():
+    name = input("Enter your name: ")
+    house = input("Enter your house: ")
+    student = Student(name, house)  # working as a constructor
+    return student
+
+# --- CLASS (INSTANCE) METHODS
+
+# let's fix things in class
+# they come with certain METHODS
+
+# object is an instance of the class
+
+
+class Student:
+    def __init__(self, name, house):  # dander init method - instance method, to initialize contents of the objects and
+        # objects itself
+        #                   ^ adding variables to objects
+        # self is like the access to the current object that was created, place where variables stored
+        self.name = name  # instance variable, can be .n .h, but it's less readable
+        self.house = house  # there can be stored list, and not only variable
+
+
+# we make variables inside the object and assign inside
+# let's make it even more tight
+
+class Student:
+    ...
+
+
+def get_student():
+    name = input("Enter your name: ")
+    house = input("Enter your house: ")
+    return Student(name, house)
 
