@@ -135,14 +135,30 @@ class Student:
 
 
 # we make variables inside the object and assign inside
-# let's make it even more tight
+
+# --- RAISE
+# to create and raise your own exception when something goes wrong
+# to alert that there is an error
+
+# now we can control what's going inside the class. While in dictionary we can put anything
 
 class Student:
-    ...
+    def __init__(self, name, house):
+        # to raise an error:
+        if not name:
+            raise ValueError("Student name cannot be empty")
+        if house not in ["gry", "hu", "rav", "sly"]:
+            raise ValueError("Invalid house")
+        self.name = name
+        self.house = house
 
 
 def get_student():
     name = input("Enter your name: ")
     house = input("Enter your house: ")
-    return Student(name, house)
+    # to catch error:
+    try:
+        return Student(name, house)
+    except ValueError:
+        ...
 
