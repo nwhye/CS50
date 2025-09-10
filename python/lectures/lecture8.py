@@ -185,3 +185,50 @@ def main():
 
 # --- OWN METHODS
 
+
+class Student:
+    def __init__(self, name, house, patronus):
+        # to raise an error:
+        if not name:
+            raise ValueError("Student name cannot be empty")
+        if house not in ["gry", "hu", "rav", "sly"]:
+            raise ValueError("Invalid house")
+        self.name = name
+        self.house = house
+        self.patronus = patronus
+
+    def __str__(self):
+        return f"Student {self.name} from {self.house}"
+
+# our method
+    def charms(self):
+        match self.patronus:
+            case "Stag":
+                return "🦌"
+            case "Otter":
+                return "🦦"
+            case "Jack Russel terrier ":
+                return "🐕"
+            case _:
+                return "🪄"
+
+
+def get_student():
+    name = input("Enter your name: ")
+    house = input("Enter your house: ")
+    patronus = input("Enter your patronus: ")
+    # to catch error:
+    try:
+        return Student(name, house, patronus)
+    except ValueError:
+        ...
+
+
+def main():
+    student = get_student()
+    print("Expecto Patronum")
+    print(student.charm())
+
+
+# --- PROPERTIES
+
