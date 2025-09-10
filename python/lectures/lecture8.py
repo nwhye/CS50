@@ -162,3 +162,26 @@ def get_student():
     except ValueError:
         ...
 
+# --- __str__
+# method so any time someone calls object it will be shown as a string, and not address
+
+class Student:
+    def __init__(self, name, house):
+        # to raise an error:
+        if not name:
+            raise ValueError("Student name cannot be empty")
+        if house not in ["gry", "hu", "rav", "sly"]:
+            raise ValueError("Invalid house")
+        self.name = name
+        self.house = house
+
+    def __str__(self):
+        return f"Student {self.name} from {self.house}"
+
+
+def main():
+    student = get_student()
+    print(student)
+
+# --- OWN METHODS
+
