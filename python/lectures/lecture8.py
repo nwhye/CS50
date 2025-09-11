@@ -231,4 +231,60 @@ def main():
 
 
 # --- PROPERTIES
+# attribute with more defence mechanism, to prevent programmers to mess things up
+# @property is to decorate functions
+# decorators - functions that modify the behaviour of other functions
 
+# property (fancy attribute) called "house" and instance variable "_house"
+# so when we return variable we print "return self.house"
+
+
+class Student:
+
+    def __init__(self, name, house):
+        # to raise an error:
+        if not name:
+            raise ValueError("Student name cannot be empty")
+        self.name = name
+        self.house = house  # THIS LINE ALSO CALLS THE SETTER
+
+    def __str__(self):
+        return f"Student {self.name} from {self.house}"
+
+# functions or in this case methods inside of class
+
+# GETTER - function for a class to that gets some attribute
+# @property to treat it as a getter
+    @property
+    def house(self):
+        return self._house  # _house - instance variable
+
+# SETTER - function in a class that sets some value
+# now what to do to prevent setting invalid value
+# called when trying to = to the object (student.house = "pepepoopoo") and anything ".house"
+# so it is checking and not allowing, and raising ValueError
+# @house.setter to treat it as a setter
+
+# !!! if you have instance variables "house" you can't call function "house"
+    @house.setter
+    def house(self, house):
+        if house not in ["gry", "hu", "rav", "sly"]:
+            raise ValueError("Invalid house")
+        self._house = house
+
+# so in order to access/set some attribute you go through some functions
+
+
+def main():
+    student = get_student()
+    print(student)
+
+
+def get_student():
+    name = input("Enter your name: ")
+    house = input("Enter your house: ")
+    # to catch error:
+    try:
+        return Student(name, house)
+    except ValueError:
+        ...
