@@ -235,16 +235,13 @@ def main():
 # @property is to decorate functions
 # decorators - functions that modify the behaviour of other functions
 
-# property (fancy attribute) called "house" and instance variable "_house"
+# property (fancy attribute(function)) called "house" and instance variable "_house"
 # so when we return variable we print "return self.house"
 
 
 class Student:
 
     def __init__(self, name, house):
-        # to raise an error:
-        if not name:
-            raise ValueError("Student name cannot be empty")
         self.name = name
         self.house = house  # THIS LINE ALSO CALLS THE SETTER
 
@@ -265,6 +262,8 @@ class Student:
 # so it is checking and not allowing, and raising ValueError
 # @house.setter to treat it as a setter
 
+# so no blind assignment from left to right, and if you try, it is checking class for setter
+
 # !!! if you have instance variables "house" you can't call function "house"
     @house.setter
     def house(self, house):
@@ -273,6 +272,15 @@ class Student:
         self._house = house
 
 # so in order to access/set some attribute you go through some functions
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        if not name:
+            raise ValueError("Student name cannot be empty")
 
 
 def main():
@@ -283,8 +291,10 @@ def main():
 def get_student():
     name = input("Enter your name: ")
     house = input("Enter your house: ")
-    # to catch error:
-    try:
-        return Student(name, house)
-    except ValueError:
-        ...
+
+# _ means (by convention) private and "please, don't touch it"
+
+# int str are classes, and .lower, .strip - methods that pre-build in the class
+
+# --- CLASS METHODS
+
