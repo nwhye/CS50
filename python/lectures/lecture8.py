@@ -124,6 +124,9 @@ def get_student():
 
 # object is an instance of the class
 
+# self - represents the instance of the class being used
+# instance - variable belonging to one and only one object
+
 
 class Student:
     def __init__(self, name, house):  # dander init method - instance method, to initialize contents of the objects and
@@ -296,5 +299,50 @@ def get_student():
 
 # int str are classes, and .lower, .strip - methods that pre-build in the class
 
+# dict() and {} are the same
+# list() and [] are the same
+
 # --- CLASS METHODS
 
+# to create action that associated with the class, no matter what the objects
+# @classmethod - it doesn't have access to self, but know what's class it's inside
+# so bound to the class, and not the instance of the class
+
+
+# sometimes we don't need many objects, and need only one
+# so we can use Class as a container, for data and/or functionalty
+
+# here the example how we would do it, but WITHOUT class method
+import random
+
+
+class Hat:
+    def __init__(self):
+        self.houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+
+    def sort(self, name):
+        print(name, "is in", random.choice(self.houses))
+
+
+hat = Hat()
+hat.sort("Harry")
+
+
+# now let's do it the right way
+# class variable - variable that exist in the class and there one copy for all objects
+# we use it when we need to work with class, and not with objects
+
+# so we don't need multiple hats, only one
+# so, we use class as container to bundle functionality that connected to the hat
+
+class Hat:
+
+    houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+
+    @classmethod
+    def sort(cls, name):  # cls - reference to the class
+        print(name, "is in", random.choice(cls.houses))
+
+
+# we are not bothered creating object, we just access class method inside the class
+Hat.sort("Harry")
