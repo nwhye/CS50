@@ -346,3 +346,23 @@ class Hat:
 
 # we are not bothered creating object, we just access class method inside the class
 Hat.sort("Harry")
+
+
+# why function get_student located not in the class connected with student?
+
+# new function inside class Student
+@classmethod  # to escape chicken-egg situation, so we use class method that does not require to create Student Object
+def get(cls):
+    name = input("Enter your name: ")
+    house = input("Enter your house: ")
+    return cls(name, house)
+
+
+def main():
+    student = Student.get()   # we call function inside of class
+    print(student)
+
+
+# --- INHERITANCE
+
+
